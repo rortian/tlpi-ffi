@@ -5,5 +5,8 @@ module TLPI::Six
 
   #p 114
   attach_function :getpid, [], :int
+
+  #p 115
+  attach_function :getppid, [], :int
 end
 
