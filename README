@@ -1,0 +1,11 @@
+This is an attempt to translate and hopefully go on to expose Linux system calls 
+that will be follow the:
+
+The Linux Programming Interface
+by Michael Kerrisk
+http://man7.org/tlpi/
+
+which has an impressive source distribution found at:
+
+http://man7.org/tlpi/code/index.html
+
