@@ -1,4 +1,2 @@
-$:.unshift File.join(File.dirname(__FILE__),'..','lib')
-require 'pry'
-binding.pry
+$:.unshift File.join(File.dirname(__FILE__),'..','..','lib')
 require 'tlpi-ffi'
