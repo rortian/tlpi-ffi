@@ -7,4 +7,3 @@ module TLPI::Six
   attach_function :getpid, [], :int
 end
 
-puts TLPI::Six.getpid
