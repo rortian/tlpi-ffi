@@ -4,7 +4,7 @@ module TLPI::Six
   ffi_lib FFI::Library::LIBC
 
   #p 114
-  attach_function :gitpid, [], :int
+  attach_function :getpid, [], :int
 end
 
-puts TLPI::Six.gitpid
+puts TLPI::Six.getpid
