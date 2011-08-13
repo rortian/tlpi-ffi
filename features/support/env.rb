@@ -1,5 +1,2 @@
-require 'pry'
-x = File.dirname(__FILE__)
-$:.unshift File.join(File.dirname(x),'..','lib')
-binding.pry
-puts TLPI.constants
+$:.unshift File.join(File.dirname(__FILE__),'..','lib')
+require 'tlpi-ffi'
