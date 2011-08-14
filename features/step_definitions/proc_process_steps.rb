@@ -1,6 +1,6 @@
 
 When /^I look at \/proc\/self\/status$/ do
-  @self_status.should exist
+  @self_status.should be
 end
 
 Then /^I should have some info about myself$/ do
