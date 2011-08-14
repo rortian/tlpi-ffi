@@ -8,6 +8,12 @@ module TLPI::Seven
 
   #p 140
   attach_function :sbrk, [:int], :pointer
+
+  #p 141
+  attach_function :malloc, [:int], :pointer
+
+  #p 141
+  attach_function :free, [:pointer], :void
   
 
 end
