@@ -4,3 +4,8 @@ Feature: Memory Stuff
   Scenario: malloc!!!
     When I call malloc
     Then I get a pointer
+
+  Scenario: malloc and then free
+    When I call malloc
+    Then I get a pointer
+    And I can call free on it
