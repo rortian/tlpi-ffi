@@ -6,6 +6,7 @@ end
 Then /^the brave programmer can determine the pid$/ do
   #pid will be greater than init's of 1
   TLPI::Six.getpid.should > 1
+  TLPI::Six.getpid.should == @self_status.pid
 end
 
 Then /^the brave programmer can determine the ppid$/ do
