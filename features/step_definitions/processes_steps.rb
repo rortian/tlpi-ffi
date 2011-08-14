@@ -25,14 +25,20 @@ Then /^it should be the same as "([^"]*)" from the ENV hash$/ do |var|
 end
 
 When /^I get the environ pointer$/ do
-    pending # express the regexp above with the code you wish you had
+  @environ = TLPI::Six.environ
+  @environ.should be
 end
 
 Then /^I have a pointer that I can get all the environ strings$/ do
-    pending # express the regexp above with the code you wish you had
+  @strings = @environ.get_array_of_string(0)
+  @strings.size > 0
 end
 
 Then /^that should contain the same information as the ENV hash$/ do
-    pending # express the regexp above with the code you wish you had
+  @strings.size.should == ENV.size
+  @strings.collect {|s| s.split('=') }.each do |(k,*v)|
+    v = v.join '='
+    v.should == ENV[k]
+  end
 end
 
