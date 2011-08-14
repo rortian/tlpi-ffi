@@ -24,3 +24,15 @@ Then /^it should be the same as "([^"]*)" from the ENV hash$/ do |var|
   @genenv.should == ENV[var]
 end
 
+When /^I get the environ pointer$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^I have a pointer that I can get all the environ strings$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^that should contain the same information as the ENV hash$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
