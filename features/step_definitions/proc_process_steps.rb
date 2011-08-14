@@ -1,6 +1,6 @@
 
 When /^I look at \/proc\/self\/status$/ do
-  @self_status.should instance_of?(TLPI::Proc::Process)
+  @self_status.should exist
 end
 
 Then /^I should have some info about myself$/ do
