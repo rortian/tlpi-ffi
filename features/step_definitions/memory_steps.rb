@@ -1,5 +1,7 @@
 When /^I call malloc$/ do
-    pending # express the regexp above with the code you wish you had
+  @returned = TLPI::Seven.malloc 1024
+  require 'pry'
+  binding.pry
 end
 
 Then /^I get a pointer$/ do
