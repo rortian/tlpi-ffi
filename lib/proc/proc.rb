@@ -23,7 +23,7 @@ module TLPI::Proc
         when /^PPid:/
           @ppid = spl[1].to_i
         else
-          puts line
+          #puts line
         end
       end
     end
