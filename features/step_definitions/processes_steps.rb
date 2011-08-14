@@ -12,5 +12,6 @@ end
 Then /^the brave programmer can determine the ppid$/ do
   #ppiid will be greater than init's of 1
   TLPI::Six.getppid.should > 1
+  TLPI::Six.getpid should == @self_status.ppid
 end
 
