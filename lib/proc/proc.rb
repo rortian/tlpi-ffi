@@ -10,7 +10,8 @@ module TLPI::Proc
       status = File.open @status_path
       status.readlines.each do |line|
         case line
-        when
+        when ''
+
         else
           puts line
         end
