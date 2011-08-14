@@ -21,6 +21,8 @@ When /^I ask for an enviroment variable "([^"]*)" via getenv$/ do |var|
 end
 
 Then /^it should be the same as "([^"]*)" from the ENV hash$/ do |var|
+  require 'pry'
+  binding.pry
   @genenv.should == ENV[var]
 end
 
