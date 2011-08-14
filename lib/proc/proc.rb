@@ -9,21 +9,21 @@ module TLPI::Proc
 
     def check_status
       status = File.open @status_path
-      status.readlines.each do |line|
-        spl = line.split
-        case line
+      status.readlines.map(&:split).each do |(entry,*value)|
+        easy = value.first
+        case entry
         when /Name:/
-          @name = spl[1]
+          @name = easy
         when /State:/
-          @state = line
+          @state = easy
         when /Tgid:/
-          @tgid = spl[1].to_i
+          @tgid = easy.to_i
         when /^Pid:/
-          @pid = spl[1].to_i
+          @pid = easy.to_i
         when /^PPid:/
-          @ppid = spl[1].to_i
+          @ppid = easy.to_i
         else
-          #puts line
+          puts value.unshift(entry).join(' ')
         end
       end
     end
