@@ -1,6 +1,6 @@
 Given /^A process this is running in$/ do
   #if we get here, it's true
-  TLPI::Proc::Process.new
+  @self_status = TLPI::Proc::Process.new
 end
 
 Then /^the brave programmer can determine the pid$/ do
