@@ -16,10 +16,11 @@ Then /^the brave programmer can determine the ppid$/ do
 end
 
 When /^I ask for an enviroment variable "([^"]*)" via getenv$/ do |var|
-    pending # express the regexp above with the code you wish you had
+  @genenv = TLPI::Six.getenv(var)
+  @genenv.should be
 end
 
 Then /^it should be the same as "([^"]*)" from the ENV hash$/ do |var|
-    pending # express the regexp above with the code you wish you had
+  @genenv.should == ENV[var]
 end
 
