@@ -8,5 +8,8 @@ module TLPI::Six
 
   #p 115
   attach_function :getppid, [], :int
+
+  #p 127
+  attach_function :getenv, [:string], :string
 end
 
