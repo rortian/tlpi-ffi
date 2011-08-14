@@ -1,7 +1,7 @@
 module TLPI::Proc
   class Process
 
-    attr_reader :name,:state,:tgid
+    attr_reader :name,:state,:tgid,:pid,:ppid
 
     def initialize(pid = 'self')
       @status_path = "/proc/#{pid}/status"
@@ -18,7 +18,13 @@ module TLPI::Proc
         when /State:/
           @state = line
         when /Tgid:/
-          @tgid = spl[1]
+          @tgid = spl[1].to_i
+        when /Pid:/
+          @pid = spl[1].to_i
+        when /PPid:/
+          require 'pry'
+          binding.pry
+          @ppid = spl[1].to_i
         else
           puts line
         end
