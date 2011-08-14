@@ -11,5 +11,17 @@ module TLPI::Six
 
   #p 127
   attach_function :getenv, [:string], :string
+
+  #p 128
+  attach_function :putenv, [:string], :int
+
+  #p 128
+  attach_function :setenv, [:string,:string,:int], :int
+
+  #p 129
+  attach_function :unsetenv, [:string], :int
+
+  #p 129
+  attach_function :cleanenv, [], :int
 end
 
