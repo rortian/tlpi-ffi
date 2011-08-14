@@ -4,7 +4,7 @@ Feature: The proc process information
   in the procfs
 
   Scenario: Getting my info
-    Given A linux process
+    Given A process this is running in
     When I look at /proc/self/status
     Then I should have some info about myself
 
