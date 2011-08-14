@@ -10,7 +10,7 @@ module TLPI::Six
   attach_function :getppid, [], :int
 
   #p 127 
-  attach_variable :environ,:pointer
+  attach_variable :environ, :pointer
 
   #p 127
   attach_function :getenv, [:string], :string

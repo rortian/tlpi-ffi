@@ -14,3 +14,8 @@ Feature: Processes
     When I ask for an enviroment variable "SHELL" via getenv
     Then it should be the same as "SHELL" from the ENV hash
 
+  Scenario: Using the environ hash
+    When I get the environ pointer
+    Then I have a pointer that I can get all the environ strings
+    And that should contain the same information as the ENV hash
+
