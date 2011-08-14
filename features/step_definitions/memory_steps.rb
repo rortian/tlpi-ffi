@@ -8,6 +8,6 @@ Then /^I get a pointer$/ do
 end
 
 Then /^I can call free on it$/ do
-    pending # express the regexp above with the code you wish you had
+  TLPI::Seven.free @returned
 end
 
