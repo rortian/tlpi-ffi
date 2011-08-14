@@ -1,6 +1,7 @@
 module TLPI::Proc
   class Process
-    attr_reader :name,:state,:tgid,:pid,:ppid
+    attr_reader :name,:state,:tgid,:pid,:ppid,
+      :threads
 
     def initialize(pid = 'self')
       @status_path = "/proc/#{pid}/status"

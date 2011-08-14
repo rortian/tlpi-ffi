@@ -9,5 +9,6 @@ Then /^I should have some info about myself$/ do
   @self_status.tgid.should be
   @self_status.pid.should > 0
   @self_status.ppid.should > 0
+  @self_status.threads.should > 0
 end
 
