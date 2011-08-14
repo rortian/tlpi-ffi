@@ -10,3 +10,7 @@ Feature: Processes
     Given A process this is running in
     Then the brave programmer can determine the ppid
 
+  Scenario: Getting an enviroment variable with getenv
+    When I ask for an enviroment variable "SHELL" via getenv
+    Then it should be the same as "SHELL" from the ENV hash
+

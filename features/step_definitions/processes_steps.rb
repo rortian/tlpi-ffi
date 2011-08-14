@@ -15,3 +15,11 @@ Then /^the brave programmer can determine the ppid$/ do
   TLPI::Six.getppid.should == @self_status.ppid
 end
 
+When /^I ask for an enviroment variable "([^"]*)" via getenv$/ do |var|
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^it should be the same as "([^"]*)" from the ENV hash$/ do |var|
+    pending # express the regexp above with the code you wish you had
+end
+
