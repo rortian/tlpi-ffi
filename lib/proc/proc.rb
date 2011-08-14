@@ -22,6 +22,8 @@ module TLPI::Proc
           @pid = easy.to_i
         when /^PPid:/
           @ppid = easy.to_i
+        when /^Threads:/
+          @threads = easy.to_i
         else
           puts value.unshift(entry).join(' ')
         end
