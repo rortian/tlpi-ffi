@@ -1,6 +1,5 @@
 module TLPI::Proc
   class Process
-
     attr_reader :name,:state,:tgid,:pid,:ppid
 
     def initialize(pid = 'self')
@@ -19,11 +18,9 @@ module TLPI::Proc
           @state = line
         when /Tgid:/
           @tgid = spl[1].to_i
-        when /Pid:/
+        when /^Pid:/
           @pid = spl[1].to_i
-        when /PPid:/
-          require 'pry'
-          binding.pry
+        when /^PPid:/
           @ppid = spl[1].to_i
         else
           puts line
