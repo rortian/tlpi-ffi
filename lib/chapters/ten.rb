@@ -17,4 +17,7 @@ module TLPI::Ten
   #p 187
   attach_function :time, [:pointer], :ulong
 
+  #p 188
+  attach_function :ctime, [:pointer], :string
+
 end
