@@ -9,3 +9,12 @@ Then /^I should know what time it is$/ do
   comparison.should < 2
   @time_struct[:tv_usec].should be
 end
+
+When /^I call time$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should know the time$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
