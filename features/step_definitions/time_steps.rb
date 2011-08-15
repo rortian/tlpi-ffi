@@ -31,6 +31,8 @@ end
 
 Then /^I should have time broken up when I call gmtime$/ do
   @returned = TLPI::Ten.gmtime @time_pointer
+  tm = TLPI::Ten::Tm.new @returned
+  tm_sec = tm[:tm_sec]
   require 'pry'
   binding.pry
 end
