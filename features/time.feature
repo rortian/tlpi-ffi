@@ -13,3 +13,7 @@ Feature: Time
   Scenario: Getting a human readable string with ctime
     Given I have a pointer to a time returned by time
     Then I should have a string to look at when I call ctime
+
+  Scenario: Getting time broken up with gmtime
+    Given I have a pointer to a time returned by time
+    Then I should have time broken up when I call gmtime
