@@ -20,7 +20,9 @@ Then /^I should know the time$/ do
 end
 
 Given /^I have a pointer to a time returned by time$/ do
-    pending # express the regexp above with the code you wish you had
+  require 'pry'
+  binding.pry
+  @time_pointer = FFI::MemoryPointer.new(:size_t).write_size_t(TLPI::Ten::time nil)
 end
 
 Then /^I should have a string to look at when I call ctime$/ do
