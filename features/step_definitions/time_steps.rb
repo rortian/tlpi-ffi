@@ -30,6 +30,8 @@ Then /^I should have a string to look at when I call ctime$/ do
 end
 
 Then /^I should have time broken up when I call gmtime$/ do
-    pending # express the regexp above with the code you wish you had
+  @returned = TLPI::Ten.gmtime @time_pointer
+  require 'pry'
+  binding.pry
 end
 
