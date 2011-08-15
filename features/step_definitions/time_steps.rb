@@ -25,5 +25,7 @@ end
 
 Then /^I should have a string to look at when I call ctime$/ do
   @result = TLPI::Ten.ctime @time_pointer
+  @ruby_ctime = Time.now.ctime 
+  @result.should =~ /#{@ruby_ctime}/
 end
 
