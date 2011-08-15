@@ -11,10 +11,13 @@ Then /^I should know what time it is$/ do
 end
 
 When /^I call time$/ do
-    pending # express the regexp above with the code you wish you had
+  @time = TLPI::Ten::time nil
+  @ruby_time = Time.now.to_i
 end
 
 Then /^I should know the time$/ do
+  require 'pry'
+  binding.pry
     pending # express the regexp above with the code you wish you had
 end
 
