@@ -31,9 +31,10 @@ end
 
 Then /^I should have time broken up when I call gmtime$/ do
   @returned = TLPI::Ten.gmtime @time_pointer
+  utc = Time.now.utc
   tm = TLPI::Ten::Tm.new @returned
-  tm_sec = tm[:tm_sec]
-  require 'pry'
-  binding.pry
+  %w(sec min hour).each do |unit|
+    tm[:"tm_#{unit}"].should == utc.send(unit.to_s)
+  end
 end
 
