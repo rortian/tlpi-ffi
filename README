@@ -9,3 +9,4 @@ which has an impressive source distribution found at:
 
 http://man7.org/tlpi/code/index.html
 
+The native calls to libc are done with the excellent ruby ffi gem.
