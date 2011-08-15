@@ -7,4 +7,5 @@ end
 Then /^I should know what time it is$/ do
   comparison = @time_struct[:tv_sec] - @ruby_time
   comparison.should < 2
+  @time_struct[:tv_usec].should be
 end
