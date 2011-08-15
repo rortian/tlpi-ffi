@@ -16,8 +16,6 @@ When /^I call time$/ do
 end
 
 Then /^I should know the time$/ do
-  require 'pry'
-  binding.pry
-    pending # express the regexp above with the code you wish you had
+  (@time - @ruby_time).should < 2
 end
 
