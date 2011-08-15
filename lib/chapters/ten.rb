@@ -11,7 +11,6 @@ module TLPI::Ten
   #time t tv_sec
   #suseconds tv_usec
   class Timeval < FFI::Struct
-    layout :tv_sec , :int,
-           :tv_usec, :int
+    layout :tv_sec => :ulong, :tv_usec => :ulong
   end
 end
