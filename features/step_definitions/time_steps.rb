@@ -1,4 +1,4 @@
-When /^I call to gettimeofday$/ do
+When /^I call gettimeofday$/ do
   @time_struct = TLPI::Ten::Timeval.new
   @time_status = TLPI::Ten.gettimeofday @time_struct,nil
   @ruby_time = Time.now.to_i

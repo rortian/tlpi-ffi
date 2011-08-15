@@ -3,5 +3,9 @@ Feature: Time
   "What time is it?"
 
   Scenario: Getting the time with gettimeofday
-    When I call to gettimeofday
+    When I call gettimeofday
     Then I should know what time it is
+
+  Scenario: Getting the time with time
+    When I call time
+    Then I should know the time
