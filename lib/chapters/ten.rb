@@ -13,4 +13,8 @@ module TLPI::Ten
   class Timeval < FFI::Struct
     layout :tv_sec => :ulong, :tv_usec => :ulong
   end
+
+  #p 187
+  attach_function :time, [:pointer], :ulong
+
 end
