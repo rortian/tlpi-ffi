@@ -11,7 +11,7 @@ Then /^I should know what time it is$/ do
 end
 
 When /^I call time$/ do
-  @time = TLPI::Ten::time nil
+  @time = TLPI::Ten.time nil
   @ruby_time = Time.now.to_i
 end
 
@@ -24,6 +24,6 @@ Given /^I have a pointer to a time returned by time$/ do
 end
 
 Then /^I should have a string to look at when I call ctime$/ do
-    pending # express the regexp above with the code you wish you had
+  @result = TLPI::Ten.ctime @time_pointer
 end
 
