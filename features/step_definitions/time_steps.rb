@@ -19,3 +19,11 @@ Then /^I should know the time$/ do
   (@time - @ruby_time).should < 2
 end
 
+Given /^I have a pointer to a time returned by time$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should have a string to look at when I call ctime$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
