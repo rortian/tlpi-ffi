@@ -4,5 +4,6 @@ end
 
 Then /^I should still be okay$/ do
   @pointer.should be
+  TLPI::FortyTwo.dlerror.should be_nil
 end
 

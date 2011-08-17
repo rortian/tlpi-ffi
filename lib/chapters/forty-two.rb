@@ -11,5 +11,8 @@ module TLPI::FortyTwo
 
   #p860
   attach_function :dlopen, [:string,:int], :pointer
+
+  #p
+  attach_function :dlerror, [], :string
 end
 
