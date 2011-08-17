@@ -1,5 +1,5 @@
 
-module TLPI::FourtyTwo
+module TLPI::FortyTwo
   extend FFI::Library
   ffi_lib :dl
 
