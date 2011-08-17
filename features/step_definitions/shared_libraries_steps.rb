@@ -3,7 +3,6 @@ When /^I open a shared library$/ do
 end
 
 Then /^I should still be okay$/ do
-  require 'pry'
-  binding.pry
+  @pointer.should be
 end
 
