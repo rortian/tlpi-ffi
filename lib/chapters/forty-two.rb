@@ -1,7 +1,7 @@
 
 module TLPI::FourtyTwo
   extend FFI::Library
-  ffi_lib FFI::Library::LIBC
+  ffi_lib :dl
 
   RTLD_LAZY = 1 
   RTLD_NOW  = 2
