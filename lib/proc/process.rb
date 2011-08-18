@@ -26,7 +26,7 @@ module TLPI::Proc
         when /^Threads:/
           @threads = easy.to_i
         else
-          puts value.unshift(entry).join(' ')
+          #puts value.unshift(entry).join(' ')
         end
       end
     end
