@@ -26,5 +26,13 @@ module TLPI::FortyTwo
 
   #p
   attach_function :dlvsym, [:pointer,:string,:string], :pointer
+
+  class DlInfo < FFI::Struct
+    layout :dli_fname => :string,
+           :dli_fbase => :pointer,
+           :dli_sname => :string,
+           :dli_saddr => :pointer
+  end
+
 end
 
