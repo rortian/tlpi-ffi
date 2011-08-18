@@ -5,3 +5,7 @@ Feature: Shared Libraries
   Scenario: Opening a library with dlopen
     When I open a shared library
     Then  I should still be okay
+
+  Scenario: Finding a function with dlsym
+    When I open a fun shared library
+    Then I should be able to find a fun function in it
