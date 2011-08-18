@@ -14,5 +14,11 @@ module TLPI::FortyTwo
 
   #p
   attach_function :dlerror, [], :string
+
+  #p 
+  attach_function :dlsym, [:pointer,:string], :pointer
+
+  #p
+  attach_function :dlclose, [:pointer],:int
 end
 
