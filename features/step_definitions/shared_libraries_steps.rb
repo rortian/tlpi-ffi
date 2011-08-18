@@ -24,7 +24,8 @@ end
 Then /^I should know scary amounts of stuff about it$/ do
   @info = TLPI::FortyTwo::DlInfo.new
   TLPI::FortyTwo.dladdr @function_pointer,@info
-  require 'pry'
-  binding.pry
+  @info[:dli_fname].should be
+  @info[:dli_fbase].should be
+  @info[:dli_sname].should be
+  @info[:dli_saddr].should be
 end
-
