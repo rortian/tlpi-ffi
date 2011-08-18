@@ -20,5 +20,11 @@ module TLPI::FortyTwo
 
   #p
   attach_function :dlclose, [:pointer],:int
+
+  #p
+  attach_function :dladdr, [:pointer,:pointer], :int
+
+  #p
+  attach_function :dlvsym, [:pointer,:string,:string], :pointer
 end
 
