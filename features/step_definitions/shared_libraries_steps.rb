@@ -8,9 +8,10 @@ Then /^I should still be okay$/ do
 end
 
 When /^I open a fun shared library$/ do
-    pending # express the regexp above with the code you wish you had
+  @pointer  = TLPI::FortyTwo.dlopen("libavahi-core.so",TLPI::FortyTwo::RTLD_LAZY)
 end
 
 Then /^I should be able to find a fun function in it$/ do
-    pending # express the regexp above with the code you wish you had
+  @function_pointer = TLPI::FortyTwo.dlsym(@pointer,'avahi_s_service_browser_new')
+  @function_pointer.should be
 end
