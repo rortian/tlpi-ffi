@@ -7,3 +7,10 @@ Then /^I should still be okay$/ do
   TLPI::FortyTwo.dlerror.should be_nil
 end
 
+When /^I open a fun shared library$/ do
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should be able to find a fun function in it$/ do
+    pending # express the regexp above with the code you wish you had
+end
