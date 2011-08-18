@@ -17,7 +17,7 @@ Then /^I should be able to find a fun function in it$/ do
 end
 
 When /^I open a really sweet library$/ do
-  @pointer  = TLPI::FortyTwo.dlopen("libQtSvg.so",TLPI::FortyTwo::RTLD_LAZY)
+  @pointer  = TLPI::FortyTwo.dlopen("libcairo.so",TLPI::FortyTwo::RTLD_LAZY)
 end
 
 Then /^I should know scary amounts of stuff about it$/ do
