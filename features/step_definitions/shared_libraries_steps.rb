@@ -18,9 +18,13 @@ end
 
 When /^I open a really sweet library$/ do
   @pointer  = TLPI::FortyTwo.dlopen("libcairo.so",TLPI::FortyTwo::RTLD_LAZY)
+  @function_pointer = TLPI::FortyTwo.dlsym(@pointer,'cairo_svg_surface_create_for_stream')
 end
 
 Then /^I should know scary amounts of stuff about it$/ do
-    pending # express the regexp above with the code you wish you had
+  @info = TLPI::FortyTwo::DlInfo.new
+  TLPI::FortyTwo.dladdr @function_pointer,@info
+  require 'pry'
+  binding.pry
 end
 
